@@ -1,6 +1,6 @@
 <?php require_once "header.php" ?>
 
-<?php if(!isset($_SESSION['login'])){
+<?php if(!isset($_SESSION['email'])){
     header("Location: login.php");
 } ?>
 
