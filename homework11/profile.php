@@ -1,0 +1,7 @@
+<?php require_once "header.php" ?>
+
+<?php if (isset($_SESSION["email"])): ?>
+    <h2>Connected user: <?= $_SESSION["email"] ?></h2>
+<?php endif; ?>
+
+<?php require_once "footer.php" ?>
