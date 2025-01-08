@@ -5,7 +5,7 @@ require_once "header.php";
 ?>
 <?php
 if (isset($_POST["email"])) {
-    $user = getUserByEmailPass($pdo, $_POST["email"], $_POST["password"]);
+    $user = getUserByEmailPass($pdo, htmlspecialchars($_POST["email"]), htmlspecialchars($_POST["password"]));
     if ($user) {
         session_regenerate_id(true);
         $_SESSION["email"] = $_POST["email"];
